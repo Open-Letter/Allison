@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Open Letter</title>
+
+
+  <style>
+    /* General Reset */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Courier New", Courier, monospace;
+      background-color: #ffffff;
+      color: #000000;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+    }
+
+    /* Full-Screen Overlay */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    /* Envelope Container */
+    .envelope-container {
+      position: relative; /* So we can absolutely position text inside */
+      max-width: 80vw;    /* Make the envelope image responsive */
+      width: 600px;       /* or a fixed width if you prefer */
+    }
+    .envelope-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Positioning the text inside the envelope flap */
+    .envelope-text {
+      position: absolute;
+      /* Adjust these to move your text within the flap area: */
+      top: 22%;         /* Adjust to move text up/down inside the flap */
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2rem;
+      font-weight: bold;
+      max-width: 80%;
+    }
+
+    /* Letter Container */
+    .letter {
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      border: 1px solid #000000;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 40pt;
+      margin-bottom: 20px; /* Add space between pages */
+    }
+
+    .text {
+      width: 80%;
+      max-width: 600px;
+      padding: 20px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 80px;
+      text-align: center;
+    }
+
+    /* Indent Style for Specific Paragraph */
+    .indented {
+      text-indent: 40px; /* Only applies to this class */
+    }
+
+    /* Date and Signature */
+    .date {
+      text-align: right;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .signature {
+      margin-top: 30px;
+      text-align: right;
+      font-style: italic;
+    }
+    .image-div img{
+      width: 500px;
+      height: auto;
+      display: block;
+    }
+    @media only screen and (max-width: 480px) {
+      .image-div img {
+        width: 100%; /* Make images responsive to screen size */
+        max-width: 300px; /* Limit maximum width */
+        height: auto; /* Maintain aspect ratio */
+        }
+      .envelope-text {
+        position: absolute;
+        /* Adjust these to move your text within the flap area: */
+        top: 10%;         /* Adjust to move text up/down inside the flap */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.2rem;
+        font-weight: bold;
+        max-width: 80%;
+        }
+    }
+  </style>
+
+
+</head>
+
+
+
+
+<body>
+  <!-- Audio Element -->
+  <audio id="background-song" loop>
+    <source src="Audio/Acoustics.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Full-Screen Overlay with Envelope Image -->
+  <div id="overlay">
+    <div class="envelope-container">
+      <img src="Images/image.png" alt="Envelope" />
+      <div class="envelope-text">
+        Tap anywhere to open the letter
+      </div>
+    </div>
+  </div>
+
+  <!-- Letter Content -->
+  <div class="letter">
+    <div class="date" id="current-date"></div>
+    <p>
+      My Dearest Allie,
+    </p>
+    <p class="indented">
+      A part of your soul lingers in my bedroom, day and night, as the thought of you hasn't left my head. 
+      The memories created by our love are all that's left as your scent on my pillow and the indent 
+      on my mattress have long since faded just like the invisible force that once attracted us to each other. 
+      And yet, despite the distance now between us, I've learned that love is real and what we had will never be forgotten.
+    </p>
+    <p class="indented">
+      From our first picnic date to our last sushi dinner and every "I love you" in between, 
+      I will forever remember my first love, Allison.
+    </p>
+    <p class="indented">
+      There's so much I could write about, so many words to pour out onto this page. 
+      But the truth is, out of eight billion people, the only one I want is you. 
+      The only eyes I want to look into, the only fingertips I want combing my hair. 
+      The lesson I've learned from losing you tastes bitter, but it has shown me how to be the man you deserve and desire. 
+      And if you choose to keep this distance, just know that I'm not chasing you out of a lack of self respect, 
+      but because you are worth every ounce of hope I have left. You always have been.
+    </p>
+    <div class="signature">
+      Sincerely,<br>
+      Baby Boy
+    </div>
+  </div>
+
+  <br>
+
+  <div class="letter">
+    <p>A list I owe you...</p>
+    <p>Reasons why I loved you</p>
+    <p>
+      1. Your name.<br>
+      2. Your Style.<br>
+      3. The way you looked at me.<br>
+      4. How quickly I got lost in your eyes.<br>
+      5. That beautiful hair.<br>
+      6. Your Smile.<br>
+      7. The love you radiated.<br>
+      8. The texts of how proud you were of me.<br>
+      9. Your gifts.<br>
+      10. Your drive for a successful life.<br>
+      11. The way you carry yourself.<br>
+      12. I felt loved for once.<br>
+      13. How you cleaned the room before I came over to have less dog hair.<br>
+      14. Drove 3 hours home and back just to see me.<br>
+      15. Spent the little money you had on me.<br>
+      16. The comfort from hugging you.<br>
+      17. The warmth from your soul.<br>
+      18. Your hugs.<br>
+      19. Quit vaping because I didn't like it.<br>
+      20. Started to call me baby boy because I liked it.<br>
+      21. How comfortable yet how nervous I was around you.<br>
+      22. How clean you are.<br>
+      23. The way you motivated me and continue to do.<br>
+      24. The love you have for my culture.<br>
+      25. Your scent.<br>
+      26. Your family.<br>
+      27. Your confidence.<br>
+      28. Your laugh.<br>
+      29. Your independence.<br>
+      30. Your mental strength.<br>
+      31. Your loyalty.<br>
+      32. Your teeth.<br>
+      33. Your face.<br>
+      34. Looked good in everything you wore.<br>
+      35. Your ability to sleep better around me.<br>
+      36. Your Organized.<br>
+      37. Saved the flowers I bought you.<br>
+      38. Our goodnight saying.<br>
+      39. Our nicknames.<br>
+      40. Your aesthetically pleasing.<br>
+      41. Your tattoo's.<br>
+      42. Your car.<br>
+      43. Your love to God.<br>
+      44. Your music taste.<br>
+      45. Your standards.<br>
+      46. The food you cooked.<br>
+      47. You being silly.<br>
+      48. Your morning hair.<br>
+      49. Your understandingness <br>
+      50. Your aesthetic sense.<br>
+      51. Your empathy.<br>
+      52. Your appreciation.<br>
+      53. How you remembered everything about me.<br>
+      54. Seeing your face on facetime while at school.<br>
+      55. How you wiped tears off my face.<br>
+      56. Your competitiveness.<br>
+      57. Not giving up.<br>
+      58. Your cute pouting face.<br>
+      59. You being the passenger princess.<br>
+      60. Seeing your happiness around your sisters<br>
+      61. Getting to paint your toenails.<br>
+      62. You opened my eyes.<br>
+      63. Being a starbucks girl.<br>
+      64. When I got to shower you.<br>
+      65. Seeing your Goodmorning texts.<br>
+      66. Your Height.<br>
+      67. Thinking you were the only women on this planet.<br>
+      68. How much you cared about me.<br>
+      69. Getting to pick flowers for you.<br>
+      70. Eating fastfood with you.<br>
+      71. When you got upset you had to go back to school.<br>
+      72. Your well spoken.<br>
+      73. You trusted me.<br>
+      74. How you held my arm.<br>
+      75. How you slept on my chest.<br>
+      76. Your beliefs.<br>
+      77. How you turned into a soft girl around me.<br>
+      78. How you respected me.<br>
+      79. You made time for us.<br>
+      80. Your eyebrows.<br>
+      81. Your nose.<br>
+      82. Your ears.<br>
+      83. When you asked me for help.<br>
+      84. You like wine.<br>
+      85. Your love for food.<br>
+      86. Your list of date ideas.<br>
+      87. Your desire to spoil me.<br>
+      88. Time went by quick with you.<br>
+      89. You liking mcchickens with cheese and pickles.<br>
+      90. Your middle name.<br>
+      91. Your last name.<br>
+      92. Your random phone calls.<br>
+      93. Playing games on discord.<br>
+      94. How you love your family<br>
+      95. How supportive you were.<br>
+      96. When you ranted to me.<br>
+      97. Your voice.<br>
+      98. Only girl I find attractive.<br>
+      99. Your kisses.<br>
+      100. When you sniffed my armpits.<br>
+    </p>
+  </div>
+
+  <div class="image-div">
+    <img src="Images/1.JPG"/>
+    <br>
+    <img src="Images/2.JPG"/>
+    <br>
+    <img src="Images/3.JPG"/>
+    <br>
+    <img src="Images/4.JPG"/>
+    <br>
+    <img src="Images/5.JPG"/>
+    <br>
+    <img src="Images/6.JPG"/>
+    <br>
+    <img src="Images/7.JPG"/>
+    <br>
+    <img src="Images/8.JPG"/>
+    <br>
+    <img src="Images/9.JPG"/>
+    <br>
+    <br>
+  </div>
+
+  <p class="text">
+    Doing it right this time
+    <br>
+    <br>
+    A foundation cemented by God, where trust replaces jealousy and patience silences fear. A bond no longer shaken by insecurity, but strengthened by faith and commitment. 
+    A partnership where we lift each other higher toward success, toward peace, toward a future.
+    <br>
+    <br>
+    Just two people working toward a life filled with love, purpose, and growth every single day.
+  </p>
+
+  <p class="text">
+    If there's any doubt in your mind that I didn't write this. 
+    Know these words are entirely my own, giving voice to what my heart struggles to say out loud.
+    <br>
+    <br>
+    The date updates to the current day to symbolize what I've written isn't just a fleeting thought, its something I feel everyday. No matter how much time passes, these words remain true.
+    <br>
+    <br>
+    <b>There's an undeniable truth that you still hold a place in my heart.</b>
+  </p>
+
+
+
+
+
+
+
+  <script>
+    // Display Real-Time Date
+    function updateDate() {
+      const dateElement = document.getElementById('current-date');
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const today = new Date().toLocaleDateString(undefined, options);
+      dateElement.textContent = today;
+    }
+    updateDate();
+
+    // Audio and Overlay
+    const audio = document.getElementById('background-song');
+    const overlay = document.getElementById('overlay');
+
+    // Play music & remove the envelope overlay on first click
+    document.body.addEventListener('click', function () {
+      if (audio.paused) {
+        audio.play();
+        overlay.style.display = 'none';
+      }
+    });
+  </script>
+
+
+
+
+</body>
+</html>
